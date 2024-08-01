@@ -19,7 +19,7 @@ from aiogram import F, Router
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message
 
-import app.keyboards as kb
+import funcshional.keyboards as kb
 
 router = Router()
 
@@ -32,3 +32,4 @@ async def start(message: Message):
     await message.answer("Hi!")
 def reg_handler(dp):
     dp.message.register(start, F.text == '/start')
+    
